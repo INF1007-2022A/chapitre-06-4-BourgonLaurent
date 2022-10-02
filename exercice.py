@@ -15,8 +15,8 @@ def join_dictionaries(dictionaries: list[dict[int, str]]) -> dict[int, str]:
     return {k: v for d in dictionaries for k, v in d.items()}
 
 
-def dictionary_from_lists(keys, values):
-    return {}
+def dictionary_from_lists(keys: list[str], values: list[str]) -> dict[str, str]:
+    return dict(zip(keys, values))
 
 
 def get_greatest_values(dictionnary, num_values):
