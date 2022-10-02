@@ -11,8 +11,8 @@ def get_even_keys(dictionary: dict[int, str]) -> set[int]:
     return {k for k in dictionary.keys() if k % 2 == 0}
 
 
-def join_dictionaries(dictionaries):
-    return {}
+def join_dictionaries(dictionaries: list[dict[int, str]]) -> dict[int, str]:
+    return {k: v for d in dictionaries for k, v in d.items()}
 
 
 def dictionary_from_lists(keys, values):
