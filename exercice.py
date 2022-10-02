@@ -19,8 +19,9 @@ def dictionary_from_lists(keys: list[str], values: list[str]) -> dict[str, str]:
     return dict(zip(keys, values))
 
 
-def get_greatest_values(dictionnary, num_values):
-    return []
+def get_greatest_values(dictionnary: dict[str, int], num_values: int):
+    rev_sorted_values = sorted(dictionnary.values(), reverse=True)
+    return rev_sorted_values[:num_values]
 
 
 def get_sum_values_from_key(dictionnaries, key):
