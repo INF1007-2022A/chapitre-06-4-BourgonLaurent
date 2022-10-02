@@ -19,13 +19,17 @@ def dictionary_from_lists(keys: list[str], values: list[str]) -> dict[str, str]:
     return dict(zip(keys, values))
 
 
-def get_greatest_values(dictionnary: dict[str, int], num_values: int):
+def get_greatest_values(dictionnary: dict[str, int], num_values: int) -> list[int]:
     rev_sorted_values = sorted(dictionnary.values(), reverse=True)
     return rev_sorted_values[:num_values]
 
 
-def get_sum_values_from_key(dictionnaries, key):
-    return 0
+def get_sum_values_from_key(dictionaries: list[dict[str, int]], key: str) -> int:
+    i = 0
+    for dictionary in dictionaries:
+        i += dictionary.get(key, 0)
+
+    return i
 
 
 if __name__ == "__main__":
